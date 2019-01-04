@@ -11,12 +11,13 @@
  * Who will tell the story of your life?"
  */
  
-
+import javax.swing.JOptionPane;
 import processing.net.*;
 Client c;
 String data;
-String url = ("snitelecom.com.br").trim();
-int p = 80;
+String url =JOptionPane.showInputDialog("Target URL").trim();
+String po = JOptionPane.showInputDialog("PORT").trim();
+int p = Integer.parseInt(po);
 void setup() {
   String a1 = "MMMMMMMM               MMMMMMMM                            GGGGGGGGGGGGG                                            tttt                            ";
   String a2 = "M:::::::M             M:::::::M                         GGG::::::::::::G                                         ttt:::t                            ";
@@ -52,6 +53,7 @@ System.out.println(a14);
 System.out.println(a15);
 System.out.println(a16);
  size(200, 200);
+ 
   System.out.println("Trying to listen to "+url +" on port: "+p);
     System.out.println("...");
    for(int ac=0;ac<10000;ac++){
